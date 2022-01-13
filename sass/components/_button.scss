@@ -1,0 +1,53 @@
+.discoverBtn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 10rem;
+    padding: 2rem 6rem;
+    display: inline-block;
+    transition: all 0.1s;
+    position: relative;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 5px rgba($color-black, 0.3);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 3px 1px 1px rgba($color-black, 0.3);
+  }
+  &--white {
+    background-color: $background-color-white;
+    color: $color-gray;
+
+    &::after {
+      background-color: $background-color-white;
+    }
+  }
+  &--animated {
+    animation: moveInBottom 0.2s ease-in 1s;
+    animation-fill-mode: backwards;
+  }
+}
