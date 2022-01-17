@@ -158,6 +158,9 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   background-clip: text;
+  -webkit-background-clip: text;
+  -ms-background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
   letter-spacing: 0.25rem;
   -webkit-transition: all 0.2s;
@@ -167,6 +170,8 @@ body {
 .heading-secondary:hover {
   -webkit-transform: skewX(15deg) skewY(2deg) scale(1.15);
           transform: skewX(15deg) skewY(2deg) scale(1.15);
+  -moz-transform: skewX(15deg) skewY(2deg) scale(1.15);
+  -ms-transform: skewX(15deg) skewY(2deg) scale(1.15);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
@@ -375,6 +380,7 @@ body {
   background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
