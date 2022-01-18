@@ -19,6 +19,10 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-in;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   .heading-primary--sub {
@@ -28,6 +32,9 @@ body {
     font-weight: 700;
     letter-spacing: 1.5rem;
     animation: moveInRight 1s ease-in;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -49,7 +56,12 @@ body {
   color: transparent;
   letter-spacing: 0.25rem;
   transition: all 0.2s;
-
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
   &:hover {
     transform: skewX(15deg) skewY(2deg) scale(1.15);
     -moz-transform: skewX(15deg) skewY(2deg) scale(1.15);
